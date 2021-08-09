@@ -1,0 +1,23 @@
+/*login page css*/
+
+.leader-box-page-login {
+	background: #f6f5f7;
+    height: 100vh;
+     display: flex;
+    align-items: center;
+    justify-content: center   
+}
+
+.leader-box-page-login .leader-box-container-component {
+	background-color: #FFFFFF;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+	padding: 2vw 4vw;
+	height: auto;
+	text-align: center;
+	width: 30vw;
+	
+}
+.leader-box-page-login form {}

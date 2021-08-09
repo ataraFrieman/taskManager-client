@@ -1,0 +1,88 @@
+.leader-box-container-component  {
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	max-width: 80vw;
+	margin: 0 auto;
+	width: 100%;
+}
+
+
+.leader-box-div-component {
+	width: 100%;
+}
+
+/*menu*/
+
+.leader-box-side-nav-component {
+	height: 100vh;
+	background:red;
+	width: 5vw;
+	position: fixed;
+	top:0;
+	right: 0; 
+	text-align: center;
+}
+.leader-box-side-nav-component.leader-box-left-nav-component {
+	right: inherit;
+	left: 0;
+}
+
+.leader-box-side-nav-component.open {
+	width: 10vw;
+}
+
+.leader-box-open-menu-component svg ,
+.leader-box-close-menu-component svg 
+{
+width: 1vw;
+}
+
+/*menu*/
+
+/*form error*/
+.leader-box-form-error-component {
+	margin-top: 1vw;
+}
+.leader-box-form-error-component p {
+	font-size: 1vw;
+	color: red;
+	padding-bottom: .5vw
+}
+
+
+/*buttons*/
+
+ button.leader-box-button-component  {
+border-radius: 2vw;
+    border: 1px solid #FF4B2B;
+    background-color: #FF4B2B;
+    color: #FFFFFF;
+    font-size: 1vw;
+    font-weight: bold;
+    padding: 1vw 3vw;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    transition: transform 80ms ease-in;
+}
+
+button.leader-box-nav-button-component {
+    padding: 1vw;
+    border-radius: 999vw;
+    background: #000;
+    width: 3vw;
+    height: 3vw;
+    line-height: 1;
+    padding: 0;
+}
+
+
+.leader-box-logo-component  {
+	font-size: 2vw;
+	width: 10vw
+}
+.leader-box-logo-component  a {
+	
+	color: #fff;
+	text-decoration: none;
+}

@@ -1,0 +1,116 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+a,abbr,acronym,address,applet,article,aside,audio,b,big,blockquote,body,canvas,caption,center,cite,code,dd,del,details,dfn,div,dl,dt,em,embed,fieldset,figcaption,figure,footer,form,h1,h2,h3,h4,h5,h6,header,hgroup,html,i,iframe,img,ins,kbd,label,legend,li,mark,menu,nav,object,ol,output,p,pre,q,ruby,s,samp,section,small,span,strike,strong,sub,summary,sup,table,tbody,td,tfoot,th,thead,time,tr,tt,u,ul,var,video{margin:0;padding:0;border:0;font-size:100%;font:inherit;vertical-align:baseline}article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section{display:block}body{line-height:1}ol,ul{list-style:none}blockquote,q{quotes:none}blockquote:after,blockquote:before,q:after,q:before{content:'';content:none}table{border-collapse:collapse;border-spacing:0}
+
+
+
+
+/* main global css */
+
+/* html elements */
+
+h1 {
+	font-size: 4vw;
+}
+
+h2 {
+	font-size: 3vw;
+    padding-bottom: 2vw;
+}
+
+button {
+	cursor: pointer;
+}
+
+input {
+    background-color: #eee;
+    border: none;
+    padding: 1vw;
+    margin: 0 0 1vw 0;
+    width: 100%;
+}
+
+h3 {}
+h4 {}
+h5 {}
+h6 {}
+
+p {
+	font-size: 1.4vw;
+}
+
+
+/* flex */
+.leader-box-flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.leader-box-flex-wrap {
+	-ms-flex-wrap:wrap;
+	flex-wrap:wrap
+}
+.leader-box-flex-row {
+	-webkit-box-orient:horizontal;
+	-webkit-box-direction:normal;
+	-ms-flex-direction:row;
+	flex-direction:row;
+}
+
+.leader-box-flex-column {
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+	-ms-flex-direction: column;
+	flex-direction: column;
+}
+.leader-box-flexalign-center {
+	-webkit-box-align: center;
+	-ms-flex-align: center;
+	align-items: center;
+}
+
+.leader-box-flexalign-start {
+  -ms-flex-item-align: start;
+      align-self: flex-start;
+}
+.leader-box-flexalign-end {
+	-ms-flex-item-align: end;
+	align-self: flex-end;
+}
+.leader-box-alignitems-start {
+	-webkit-box-align: start;
+	-ms-flex-align: start;
+	align-items: flex-start;
+}
+.leader-box-justify-spacebetween {
+	-webkit-box-pack: justify;
+	-ms-flex-pack: justify;
+	justify-content: space-between;
+}
+.leader-box-justify-space-even {
+	-webkit-box-pack: justify;
+	-ms-flex-pack: justify;
+	justify-content: space-between;
+}
+
+.leader-box-justify-center {
+	-webkit-box-pack: center;
+	-ms-flex-pack: center;
+	justify-content: center;
+}
+
+.leader-box-justify-start {
+	-webkit-box-pack: start;
+	-ms-flex-pack: start;
+	justify-content: flex-start; 
+}
+
+.leader-box-justify-end {
+	-webkit-box-pack: end;
+	-ms-flex-pack: end;
+	justify-content: flex-end; 
+}
+/* end flex */

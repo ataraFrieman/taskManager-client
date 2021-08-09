@@ -1,0 +1,10 @@
+.leader-box-top-nav-component {
+    height: auto;
+    background: #000;
+    width: 100vw;
+    position: fixed;
+    top: 0;
+    right: 0;
+    padding-top: .5vw;
+    padding-bottom: .5vw;
+}
