@@ -1,7 +1,7 @@
-import Http from '../axios/axios';
+import Http from '../../config/axios';
 
-import { handleError } from '../utility/utility'
-import { createStorage } from '../localStorage/localStorage'
+import { handleError } from '../../utility/utility'
+import { createStorage } from '../../localStorage/localStorage'
 
 export const USER_LOGIN = '(LOGIN) USER_LOGIN';
 // action creator

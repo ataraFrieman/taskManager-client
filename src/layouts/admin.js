@@ -1,5 +1,5 @@
 import React from 'react';
-import { APP_NAME } from '../config'
+import keys from '../config/env/keys';
 import MainLayout from './main'
 import Nav from '../components/nav/nav';
 import LeftNav from '../components/leftNav/leftNav';
@@ -20,11 +20,11 @@ import './admin.css';
 
 export default function AdminLayout(props) {
   return (
-    <MainLayout cssClass={ 'admin-page '  + APP_NAME +'-' + props.cssClass} >
+    <MainLayout cssClass={ 'admin-page '  + keys.APP_NAME +'-' + props.cssClass} >
       <Nav />
       <LeftNav />
       <RightNav /> 
-      <APP_Container cssClass={ APP_NAME +'-' +'admin-page-main-container'}>
+      <APP_Container cssClass={ keys.APP_NAME +'-' +'admin-page-main-container'}>
       	{props.children} 
       </APP_Container>
     </MainLayout>

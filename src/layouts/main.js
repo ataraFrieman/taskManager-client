@@ -1,12 +1,12 @@
 import React from 'react';
-import { APP_NAME } from '../config'
+import keys from '../config/env/keys';
 /**
  * Main co
 */
 
 export default function MainLayout(props) {
   return (
-    <main className={  APP_NAME + '-main-component ' + APP_NAME + '-page '  + APP_NAME +'-' + props.cssClass} >
+    <main className={  keys.APP_NAME + '-main-component ' + keys.APP_NAME + '-page '  + keys.APP_NAME +'-' + props.cssClass} >
       {props.children} 
     </main>
   );

@@ -2,7 +2,7 @@ import React , { Component } from 'react';
 import { connect } from 'react-redux'
 import {  Redirect , Link } from 'react-router-dom'
 import MainLayout from '../../layouts/main'
-import { logInUser } from '../../actions/login.actions';
+import { logInUser } from '../../redux/actions/login.actions';
 import {  handleInputChange,
           regxValidation,
           simpleValidation,

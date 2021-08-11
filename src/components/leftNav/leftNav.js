@@ -1,6 +1,6 @@
 import React , { Component } from 'react';
 import { connect } from 'react-redux'
-import { APP_NAME } from '../../config';
+import keys from '../../config/env/keys';
 import {  App_Button, App_OpenMenuIcon, App_CloseMenuIcon } from '../../components/ui/ui';
 
 import './leftNav.css';
@@ -24,8 +24,8 @@ class LeftNav extends Component {
     const menuCssClass = this.state.open === true ? 'open' : '';
     return (
 
-      <div className={APP_NAME +'-side-nav-component ' + APP_NAME +'-left-nav-component ' + menuCssClass}>
-        <App_Button click={this.handleToggole} cssClass={APP_NAME +'-nav-button-component' }>
+      <div className={keys.APP_NAME +'-side-nav-component ' + keys.APP_NAME +'-left-nav-component ' + menuCssClass}>
+        <App_Button click={this.handleToggole} cssClass={keys.APP_NAME +'-nav-button-component' }>
         {
           this.state.open === true
           ? <App_CloseMenuIcon/>

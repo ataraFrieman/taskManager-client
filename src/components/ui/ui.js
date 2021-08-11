@@ -3,7 +3,7 @@
 */
 import React  from 'react';
 import { Link } from 'react-router-dom'
-import { APP_NAME }  from '../../config';
+import keys from '../../config/env/keys';
 
 import './ui.css';
 export const Select =  ( props ) => {
@@ -34,12 +34,12 @@ export const App_input = ( props ) => {
   const label = props.label != undefined ?  props.label : '';
   const cssInputClass = props.cssInputClass != undefined ?   props.cssInputClass : '';
 
-  const  id =  APP_NAME + "-input-" + new Date().getTime();
-  let  cssWrapperClass =  APP_NAME + '-input-component  '+ APP_NAME + ' input-' +  name + '-component ' + cssInputClass;
+  const  id =  keys.APP_NAME + "-input-" + new Date().getTime();
+  let  cssWrapperClass =  keys.APP_NAME + '-input-component  '+ keys.APP_NAME + ' input-' +  name + '-component ' + cssInputClass;
   
   let  labelField  = '';
   if ( label !== '' ) {
-    cssWrapperClass +=  APP_NAME + '-input-has-label ';
+    cssWrapperClass +=  keys.APP_NAME + '-input-has-label ';
     labelField = 
       <label htmlFor={id}> 
         {label} 
@@ -68,7 +68,7 @@ export const App_input = ( props ) => {
 export const APP_DIV = (props ) => {
   const cssClass = props.cssClass != undefined ? props.cssClass : '';
   return(
-    <div className={ APP_NAME + '-div-component ' + cssClass }>
+    <div className={ keys.APP_NAME + '-div-component ' + cssClass }>
       {props.children}
     </div>
   )
@@ -79,7 +79,7 @@ export const APP_DIV = (props ) => {
 export const APP_Container = ( props ) => {
   const cssClass = props.cssClass != undefined ?   props.cssClass : '';
   return(
-    <APP_DIV cssClass={ APP_NAME + '-flex-wrap ' + APP_NAME + '-container-component ' + cssClass}>
+    <APP_DIV cssClass={ keys.APP_NAME + '-flex-wrap ' + keys.APP_NAME + '-container-component ' + cssClass}>
       {props.children}
     </APP_DIV>
   )
@@ -94,7 +94,7 @@ export const APP_Form = ( props ) => {
   const action    = props.action != undefined ? props.action : '';
   const handleSubmit    = props.handleSubmit != undefined ? props.handleSubmit : () => {};
   return (
-     <APP_DIV cssClass={ APP_NAME + '-form-component ' + cssClass}>
+     <APP_DIV cssClass={ keys.APP_NAME + '-form-component ' + cssClass}>
         <form id={id} name={name} action={action} onSubmit={handleSubmit}>
           {props.children}
         </form>
@@ -107,7 +107,7 @@ export const APP_Form = ( props ) => {
 export const APP_Row = ( props ) => {
   const cssClass  = props.cssClass != undefined ? props.cssClass : '';
   return (
-    <APP_DIV cssClass={  APP_NAME + '-flex  ' + APP_NAME + '-flex-wrap ' + APP_NAME + '-row-component ' + cssClass}>
+    <APP_DIV cssClass={  keys.APP_NAME + '-flex  ' + keys.APP_NAME + '-flex-wrap ' + keys.APP_NAME + '-row-component ' + cssClass}>
        {props.children}
     </APP_DIV>
   )
@@ -119,7 +119,7 @@ export const APP_Row = ( props ) => {
 export const APP_Col = ( props ) => {
   const cssClass  = props.cssClass != undefined ? props.cssClass : '';
   return (
-    <APP_DIV cssClass={  APP_NAME + '-col-component ' + cssClass}>
+    <APP_DIV cssClass={  keys.APP_NAME + '-col-component ' + cssClass}>
        {props.children}
     </APP_DIV>
   )
@@ -130,7 +130,7 @@ export const APP_Col = ( props ) => {
 export const App_Form_Error = (props) => {
    const cssClass  = props.cssClass != undefined ? props.cssClass : '';
    return (
-    <APP_DIV cssClass={    APP_NAME + '-form-error-component ' + cssClass}>
+    <APP_DIV cssClass={    keys.APP_NAME + '-form-error-component ' + cssClass}>
        {props.children}
     </APP_DIV>
     )
@@ -158,7 +158,7 @@ export const APP_Title = (props) => {
      html =  <h6> {props.children} </h6>
   } 
   return (
-    <APP_DIV cssClass={ APP_NAME + '-title-component ' + cssClass}>
+    <APP_DIV cssClass={ keys.APP_NAME + '-title-component ' + cssClass}>
        {html}
     </APP_DIV>
   )
@@ -170,26 +170,26 @@ export const App_Button = (props) => {
   const primeryBg  =  ( props.primeryBg  !== undefined  )   ?  props.primeryBg : "" ;
   let cssClass  =  ( props.cssClass  !== undefined  )   ?  props.cssClass : "" ;
   if ( primeryBg === true ) {
-      cssClass +=  APP_NAME +  '-primery-bg'
+      cssClass +=  keys.APP_NAME +  '-primery-bg'
   }
   let typeHTML = null;
   let html = null;
   if  ( type === 'button' ) {
     html = 
-      <button  type="button"  className={ APP_NAME + '-button-component ' + cssClass} onClick={props.click}>
+      <button  type="button"  className={ keys.APP_NAME + '-button-component ' + cssClass} onClick={props.click}>
         {props.children}
       </button>
       
   } 
   else if ( type == "link" ) {
     html = 
-    <Link to={to} className={ APP_NAME + '-button-component ' + cssClass} >
+    <Link to={to} className={ keys.APP_NAME + '-button-component ' + cssClass} >
       {props.children}
     </Link>
   }
   else if ( type == "submit" ){  
    html = 
-      <button   className={ APP_NAME +  '-button-component ' + cssClass} onClick={props.click}>
+      <button   className={ keys.APP_NAME +  '-button-component ' + cssClass} onClick={props.click}>
         {props.children}
       </button>
 
@@ -203,7 +203,7 @@ export const App_Button = (props) => {
 
 export const App_OpenMenuIcon = () => {
   return(
-    <span className={APP_NAME +  '-open-menu-component '}>
+    <span className={keys.APP_NAME +  '-open-menu-component '}>
       <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="bars" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" class="svg-inline--fa fa-bars fa-w-14 fa-3x"><path fill="currentColor" d="M16 132h416c8.837 0 16-7.163 16-16V76c0-8.837-7.163-16-16-16H16C7.163 60 0 67.163 0 76v40c0 8.837 7.163 16 16 16zm0 160h416c8.837 0 16-7.163 16-16v-40c0-8.837-7.163-16-16-16H16c-8.837 0-16 7.163-16 16v40c0 8.837 7.163 16 16 16zm0 160h416c8.837 0 16-7.163 16-16v-40c0-8.837-7.163-16-16-16H16c-8.837 0-16 7.163-16 16v40c0 8.837 7.163 16 16 16z" class=""></path></svg>
     </span>
   )
@@ -211,7 +211,7 @@ export const App_OpenMenuIcon = () => {
 
 export const App_CloseMenuIcon = () => {
   return(
-    <span className={APP_NAME +  '-close-menu-component '}>
+    <span className={keys.APP_NAME +  '-close-menu-component '}>
       <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="times" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 352 512" class="svg-inline--fa fa-times fa-w-11 fa-3x"><path fill="currentColor" d="M242.72 256l100.07-100.07c12.28-12.28 12.28-32.19 0-44.48l-22.24-22.24c-12.28-12.28-32.19-12.28-44.48 0L176 189.28 75.93 89.21c-12.28-12.28-32.19-12.28-44.48 0L9.21 111.45c-12.28 12.28-12.28 32.19 0 44.48L109.28 256 9.21 356.07c-12.28 12.28-12.28 32.19 0 44.48l22.24 22.24c12.28 12.28 32.2 12.28 44.48 0L176 322.72l100.07 100.07c12.28 12.28 32.2 12.28 44.48 0l22.24-22.24c12.28-12.28 12.28-32.19 0-44.48L242.72 256z" class=""></path></svg>
     </span>
   )
@@ -221,7 +221,7 @@ export const App_CloseMenuIcon = () => {
 
 export const App_Logo = () => {
   return(
-    <APP_DIV cssClass={ APP_NAME + '-logo-component ' }>
+    <APP_DIV cssClass={ keys.APP_NAME + '-logo-component ' }>
       <Link to="/">
         LOGO 
       </Link>   
