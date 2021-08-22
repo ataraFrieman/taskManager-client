@@ -3,12 +3,12 @@ import { authMethods } from '../pages/login/login.service';
 
 const AuthProvider = (props) => {
 
-    const [inputs, setInputs] = useState({ email: '', password: '' })
+    const [inputs, setInputs] = useState({userName:'', email: '', password: '' })
     const [errors, setErrors] = useState([])
     const [token, setToken] = useState(null)
 
     const handleSignup = () => {
-        return authMethods.signup(inputs.email, inputs.password, setErrors, setToken)
+        return authMethods.signup(inputs, setErrors, setToken)
     }
 
     const handleSignin = () => {

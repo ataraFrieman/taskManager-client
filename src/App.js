@@ -1,15 +1,14 @@
-import React ,{useContext} from 'react';
+import React, { useContext } from 'react';
 import { Routes } from './routes/routes'
 
 import './App.css';
 
 function App() {
 
-
   return (
-      <div className="App">
-        <Routes />
-      </div>
+    <div className="App">
+      <Routes />
+    </div>
   );
 }
 

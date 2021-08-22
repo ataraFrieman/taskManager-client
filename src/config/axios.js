@@ -60,6 +60,11 @@ const HttpFile = axios.create({
 	}
 });
 
-
+const HttpBook = axios.create({
+	baseURL: `${'http://localhost:5000/api'}`,
+	headers: {
+		'content-type': 'application/json',
+	}
+});
 export default Http;
-export { HttpMarket, HttpFile, HttpView ,HttpKnowMeUser}
+export { HttpMarket, HttpFile, HttpView ,HttpKnowMeUser,HttpBook}
