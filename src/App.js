@@ -1,10 +1,11 @@
-import React, { useContext } from 'react';
-import { Routes } from './routes/routes'
+import React, { useContext } from "react";
+import { Routes } from "./routes/routes";
 
-import './App.css';
+import "./App.css";
+var http = require("http");
 
 function App() {
-
+  
   return (
     <div className="App">
       <Routes />

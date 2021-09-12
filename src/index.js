@@ -1,6 +1,5 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import AuthProvider from './providers/authProvider'
 import { BrowserRouter } from 'react-router-dom'
 import { Provider } from 'react-redux'
 import { createStore, applyMiddleware } from 'redux';
@@ -17,9 +16,7 @@ const store = createStore(appReducers, applyMiddleware(thunk));
 ReactDOM.render(
 	<Provider store={store} >
 		<BrowserRouter forceRefresh={true}>
-			<AuthProvider>
 				<App />
-			</AuthProvider>
 		</BrowserRouter>
 	</Provider>, document.getElementById('root'));
 
